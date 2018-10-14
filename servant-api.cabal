@@ -12,13 +12,19 @@ category:            Demo
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
+data-files:          swagger.json
 
 library
   hs-source-dirs:      src
   exposed-modules:     App
   build-depends:       base >= 4.7 && < 5
                      , aeson
+                     , bytestring
+                     , lens
+                     , servant
                      , servant-server
+                     , servant-swagger
+                     , swagger2
                      , wai
                      , text
                      , warp
